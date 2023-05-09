@@ -1,6 +1,8 @@
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args){
-        First.main();
+    public static void main(String[] args) throws IOException {
+        //First.main();
         ConsoleToFile.main();
     }
 }

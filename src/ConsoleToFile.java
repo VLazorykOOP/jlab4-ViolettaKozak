@@ -12,8 +12,15 @@ public class ConsoleToFile {
 
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
-                writer.write(line);
-                writer.newLine();
+                if(line.codePointAt(line.length()-1)==90 && line.codePointAt(line.length()-2)==94){
+                    line = line.substring(0, line.length()-2);
+                    writer.write(line);
+                    break;
+                }
+                else {
+                    writer.write(line);
+                    writer.newLine();
+                }
             }
 
             writer.close();
